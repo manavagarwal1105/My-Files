@@ -15,16 +15,7 @@ The number should be from 1 to 10.
 The winner of the toss will bat first.
 '''
 from random import randint
-# Not working turtle screen!
-"""
-import turtle
 
-wn = turtle.Screen()
-wn.title("Cricket")
-wn.setup(width=800, height=600)
-wn.tracer(0)
-wn.bgcolor("black")
-"""
 #Defined Functions :-
 
 def make_menu_square(str,z,l):
