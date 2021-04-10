@@ -21,10 +21,10 @@ from random import randint
 
 def make_menu_square(str,z,l):
     a = len(str)+len(z)+len(l)
-    print("*"*a)
+    print("*"*(a+6))
     print("*",str,z,l,"*")
-    print("*"," "*56,"*")
-    print("*"*a)
+    print("*"," "*(a+2),"*")
+    print("*"*(a+6))
 """
 In toss, user will be asked to choose either even or odd Suppose the user chooses Even. 
 If the sum of the integers chosen by user and bot is even, he/she wil win the toss same 
