@@ -13,6 +13,7 @@ The rules of this game are similar to that of a regular hand cricket,
 In order to take wicket, the number chosen by the bot and user should match.
 The number should be from 1 to 10.
 The winner of the toss will bat first.
+The int value will depend on the match type
 '''
 from random import randint
 
@@ -24,13 +25,18 @@ def make_menu_square(str,z,l):
     print("*",str,z,l,"*")
     print("*"," "*56,"*")
     print("*"*a)
-
-def toss(int):
+"""
+In toss, user will be asked to choose either even or odd Suppose the user chooses Even. 
+If the sum of the integers chosen by user and bot is even, he/she wil win the toss same 
+goes for odd as well.
+"""
+def toss(int):  
     a = randint(1,10)
     b = int
     c = a + b   
     return c
 #--------------------------User's Innings----------------------------------
+#In these functions, int represents the no.of playable balls
 def user_bats_first(int):
     global user_runs1
     global user_balls1
@@ -138,7 +144,7 @@ if match_type == tm:
 #In this case the user bats first :
     if choose == even:
         if z%2 == 0:
-            user_bats_first(1000)
+            user_bats_first(1000) #since its a test match,no.of balls is 1000
         
             print(user_name, "has scored",user_runs1,"of",user_balls1,"balls \nThe target is of",user_runs1)
 
@@ -233,12 +239,12 @@ elif match_type == odi:
 #In this case the user bats first
     if choose == even:
         if z2%2 == 0:
-            user_bats_first(1000)
+            user_bats_first(300) #since its an ODI, playable balls = 300
             print(user_name, "has scored",user_runs1,"of",user_balls1,"balls \nThe target is of",user_runs1)
 
             print("The second innings start")
 # Bot comes in to bat for 2nd inning   
-            bot_bats_second(1000)
+            bot_bats_second(300)
         
             print("bot has scored",bot_runs2,"in",bot_balls2,"balls")
             if user_runs1 > bot_runs2:
@@ -252,7 +258,7 @@ elif match_type == odi:
     elif choose == even:
         if z2%2 != 0:
             
-            bot_bats_first(1000)
+            bot_bats_first(300)
             print("bot has scored",bot_runs1,"off",bot_balls1,"balls")
     
             print("Target is of",bot_runs1)
@@ -260,7 +266,7 @@ elif match_type == odi:
             print("The second innings start")
     
 # The user comes in to bat for 2nd inning
-            user_bats_second(1000)
+            user_bats_second(300)
             print("User has scored",user_runs2,"off",user_balls2,"balls")
     
             if user_runs2 > bot_runs1:
@@ -271,12 +277,12 @@ elif match_type == odi:
  #In this case the user bats first
     elif choose == odd:
         if z2%2 != 0:
-            user_bats_first(1000)
+            user_bats_first(300)
             print(user_name, "has scored",user_runs1,"of",user_balls1,"balls \nThe target is of",user_runs1)
 
             print("The second innings start")
 # Bot comes in to bat for 2nd inning   
-            bot_bats_second(1000)
+            bot_bats_second(300)
         
             print("bot has scored",bot_runs2,"in",bot_balls2,"balls")
             if user_runs1 > bot_runs2:
@@ -289,7 +295,7 @@ elif match_type == odi:
     elif choose == odd:
         if z2%2 == 0:
             
-            bot_bats_first(1000)
+            bot_bats_first(300)
             print("bot has scored",bot_runs1,"off",bot_balls1,"balls")
     
             print("Target is of",bot_runs1)
@@ -297,7 +303,7 @@ elif match_type == odi:
             print("The second innings start")
     
 # The user comes in to bat for 2nd inning
-            user_bats_second(1000)
+            user_bats_second(300)
             print("User has scored",user_runs2,"off",user_balls2,"balls")
     
             if user_runs2 > bot_runs1:
@@ -324,7 +330,7 @@ elif match_type == t20:
 #In this case the user bats first
     if choose == even:
         if z3%2 == 0:
-            user_bats_first(120)
+            user_bats_first(120) #since its a T20, Playable balls = 120
             
             print(user_name, "has scored",user_runs1,"of",user_balls1,"balls \nThe target is of",user_runs1)
 
