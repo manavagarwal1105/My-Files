@@ -4,6 +4,9 @@ Created on Sat Apr 17 14:32:02 2021
 
 @author: Manav
 """
+"""
+This program reads a dataset of 41k youtube videos. It generates a sample dataset of 5 videos at random and visualize them by plotting, Line graph, Box Plot and Histogram
+"""
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
